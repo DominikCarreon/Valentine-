@@ -1,67 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Comic Sans MS", "cursive", sans-serif;
-}
+/* Previous styles remain the same... */
 
-body {
-  height: 100vh;
-  /* Soft pink aesthetic background */
-  background: radial-gradient(circle, #ffcfe2 0%, #ffb3d1 100%);
-  display: flex;
+/* Pop-up Overlay */
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darkens the background */
+  z-index: 1000;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 40px 20px;
-  border-radius: 40px;
+/* Modal Box */
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 30px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  width: 350px;
-  border: 5px solid white;
-}
-
-.cute-img {
-  width: 100%;
-  max-width: 250px;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 24px;
-  color: #e95a8e;
-  margin-bottom: 30px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  width: 90%;
+  max-width: 400px;
   position: relative;
+  animation: popIn 0.3s ease-out;
 }
 
-button {
-  padding: 12px 35px;
-  border-radius: 25px;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.pop-up-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+  border: 5px solid #ff5f9e;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 25px;
   cursor: pointer;
-  transition: transform 0.2s;
-}
-
-#yesBtn {
-  background: #ff5f9e;
-  color: white;
-  box-shadow: 0 4px 10px rgba(255, 95, 158, 0.4);
-}
-
-#noBtn {
-  background: #fce4ec;
   color: #ff5f9e;
-  border: 2px solid #ffccd5;
+}
+
+h2 {
+  color: #ff5f9e;
+  font-size: 28px;
 }
