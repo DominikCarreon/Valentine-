@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "cursive", sans-serif;
+}
+
+body {
+  height: 100vh;
+  /* Soft pink aesthetic background */
+  background: radial-gradient(circle, #ffcfe2 0%, #ffb3d1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 350px;
+  border: 5px solid white;
+}
+
+.cute-img {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #e95a8e;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+button {
+  padding: 12px 35px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#yesBtn {
+  background: #ff5f9e;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 95, 158, 0.4);
+}
+
+#noBtn {
+  background: #fce4ec;
+  color: #ff5f9e;
+  border: 2px solid #ffccd5;
+}
