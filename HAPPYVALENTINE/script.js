@@ -1,28 +1,33 @@
 const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const modal = document.getElementById("loveModal");
-const closeBtn = document.getElementsByClassName("close")[0];
+const closeBtn = document.querySelector(".close");
 
-// Move NO button
-noBtn.addEventListener("mouseover", () => {
+// Move NO button logic
+const moveButton = () => {
   const x = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth));
   const y = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight));
   noBtn.style.position = "fixed";
   noBtn.style.left = `${x}px`;
   noBtn.style.top = `${y}px`;
+};
+
+noBtn.addEventListener("mouseover", moveButton);
+noBtn.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  moveButton();
 });
 
-// Show Modal on YES click
+// Show custom pop-up when YES is clicked
 yesBtn.addEventListener("click", () => {
   modal.style.display = "flex";
 });
 
-// Close Modal when clicking X
+// Close the pop-up
 closeBtn.onclick = function() {
   modal.style.display = "none";
 }
 
-// Close Modal when clicking outside the box
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
