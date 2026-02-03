@@ -1,5 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be My Valentine</title>  
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <div class="card">
+
+  <div class="card" id="mainCard">
     <img src="https://bubududuworld.com/wp-content/uploads/2024/10/Bubu-loving-Dudu.png" alt="Bubu and Dudu" class="cute-img">
     <h1>Can you be my Valentine?</h1>
     <div class="buttons">
@@ -8,13 +17,16 @@
     </div>
   </div>
 
-  <div id="modalOverlay" class="overlay">
-    <div class="modal">
-      <span id="closeBtn">&times;</span>
-      <h2>I LOVE YOU! 💕🐻🐼</h2>
-      <img src="YOUR_IMAGE_URL_HERE" alt="Our Photo" class="pop-up-img">
+  <div id="loveModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>I LOVE YOU! 💕🐻 🐼</h2>
+      <div class="image-container">
+        <img src="YOUR_IMAGE_LINK_HERE" alt="Love Photo" class="love-img">
+      </div>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+</html>
