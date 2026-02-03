@@ -33,3 +33,19 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+const music = document.getElementById("valentineMusic");
+
+// Previous code for moveButton and createHeart remains the same...
+
+// Updated YES button action
+yesBtn.addEventListener("click", () => {
+  // Show the modal
+  modal.style.display = "flex";
+  
+  // Play the music
+  music.play().catch(error => {
+    console.log("Music play was prevented by browser. Click anywhere to play.");
+  });
+});
