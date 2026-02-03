@@ -49,3 +49,15 @@ yesBtn.addEventListener("click", () => {
     console.log("Music play was prevented by browser. Click anywhere to play.");
   });
 });
+
+music.volume = 0;
+music.play();
+let vol = 0;
+let interval = setInterval(() => {
+    if (vol < 1) {
+        vol += 0.1;
+        music.volume = vol.toFixed(1);
+    } else {
+        clearInterval(interval);
+    }
+}, 200);
